@@ -1,0 +1,173 @@
+.detail{
+  width: 100%;
+  height: 100vh;
+  background: #eee;
+}
+
+.taskInfo{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 35rpx;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+.taskInfo .title, .taskInfo .time,.taskInfo .time2,.taskInfo .address{
+  display: flex;
+  align-items: center;
+}
+.taskInfo .address>input{
+  flex:1;
+}
+.taskInfo .title{
+  font-size: 48rpx;
+  margin-bottom: 10rpx;
+}
+ .taskInfo .time,.taskInfo .time2,.taskInfo .address{
+  /* margin-left: 30rpx; */
+  margin-bottom: 10rpx;
+  font-size: 32rpx;
+}
+.taskInfo .title image{
+  width: 56rpx;
+  height: 56rpx;
+  margin-right:  30rpx;
+}
+.taskInfo .time image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right:  30rpx;
+}
+.taskInfo .time2 image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right:  30rpx;
+}
+.taskInfo .address image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right:  30rpx;
+}
+
+.sub-info{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 18rpx 0;
+  background: #fff;
+  
+}
+.sub-info-item{
+  flex:1;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}
+.sub-info-item .title{
+  color: #ccc;
+}
+.poster,.peoples{
+  margin-top: 20rpx;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.poster,.peoples{
+  padding: 15rpx 20rpx;
+}
+.poster .title,.peoples .title{
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10rpx;
+  padding-bottom: 10rpx;
+  font-size: 32rpx;
+}
+.poster-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  
+}
+
+.poster-content .left image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius:120rpx;
+  box-shadow: 1px 2px 2px 1px #ccc;
+  margin-right: 30rpx;
+}
+.poster-content .left{
+  display: flex;
+  align-items: center;
+}
+.poster-content .right .phone-icon{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius:50%;
+  margin-right: 30rpx;
+}
+.poster-content .right{
+  display: flex;
+  align-items: center;
+}
+.poster-content .right text{
+  color: #333;
+  font-size: 32rpx;
+}
+.peoples-content{
+  display: flex;
+  padding: 20rpx 0;
+  align-items: center;
+}
+.peoples-content .people{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 100%;
+  margin-right: 30rpx;
+}
+
+.join{
+  margin-top:40rpx;
+  background: #60c0fa;
+  color: #fff;
+}
+
+.join-hover{
+  opacity: 0.8;
+}
+
+.editing{
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  padding-bottom: 10rpx;
+  padding: 10rpx ;
+  text-align: center;
+}
+
+.picker-wrap{
+  display: flex;
+}
+
+
+/* //按钮组 */
+.actions{
+  display: flex;
+  margin-top: 30rpx;
+  padding: 0 20rpx;
+}
+.actions button{
+  flex:1;
+}
+.actions button:first-child{
+  margin-right: 20rpx;
+}
+.location-icon{
+  width: 48rpx;
+  height: 48rpx;
+}
+.end-text{
+  color:#f00;
+  width: 100%;
+  text-align: center;
+}

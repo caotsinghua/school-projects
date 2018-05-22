@@ -1,0 +1,37 @@
+<view class='about'>
+  <swiper class='about-swiper' vertical="true" current="{{current}}">
+    <swiper-item class="swiper-item">
+      <view class='bg-image'>
+        <image src='/resource/images/bg.jpg'></image>
+      </view> 
+      <view class='bg-mask'></view>
+      <view class='about-content'>
+        <text class='title' animation="{{toLeft}}">关于</text>
+        <image class='logo' src='/resource/images/playicon.png' animation="{{logoAnimate}}"></image>
+        <text class='play' animation="{{toLeft}}">PlayPlay</text>
+        <view class='content' animation="{{contentAnimation}}">
+          <text>这是一个简单，普通的关于玩乐的小程序。当你需要人参加你的活动时，你可能需要这个小程序。</text>
+        </view>
+        <view class='next' animation="{{toLeft}}" bindtap='down'>
+          <text>开发者们</text>
+        </view>
+        <image src='/resource/images/down.png' class='down' bindtap='down'></image>
+      </view>
+    </swiper-item>
+    <swiper-item class="swiper-item2">
+      <view class='bg-image'>
+        <image src='/resource/images/bg.jpg'></image>
+      </view> 
+      <view class='bg-mask'></view>
+      <view class='coders' >
+        <view class='coder' wx:for="{{coders}}" wx:key="{{index}}" animation="{{toLeft}}">
+          <image src='{{item.avatar}}'></image>
+          <view class='info'>
+            <text class='name'>{{item.name}}</text>
+          <text class='desc'>{{item.desc}}</text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

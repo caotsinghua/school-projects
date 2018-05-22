@@ -1,0 +1,24 @@
+server:
+  port: 8082
+#  ssl:
+#    key-alias: tomcat
+#    key-store: keystore.p12
+#    key-store-password: 123123..
+#    key-store-type: PKCS12
+  context-path: /api
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/play
+    username: tsinghua
+    password: 123123..
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#  json美观
+  jackson:
+    serialization: true
+wxInfo:
+  appSecret:你的appsecret
+  appId: 你的appid

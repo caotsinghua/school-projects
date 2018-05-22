@@ -1,0 +1,36 @@
+<!-- <view class='register'>
+  <text>注册页面</text>
+  <input type='text' placeholder='用户名' bindinput='onInput1'></input>
+  <input type='passwrd' placeholder='密码' bindinput='onInput2'></input>
+  <input type='passwrd' placeholder='确认密码' bindinput='onInput3'></input>
+  <button bindtap='register'>注册</button>
+</view> -->
+
+<view class='login'>
+  <view class='bg-image'>
+    <image src='/resource/images/bg.jpg'></image>
+  </view> 
+  <view class='bg-mask'></view>
+  <view class='main'>
+    <view class='normal-login-wrap'>
+      <text class='title'>注册</text>
+      
+      <label for='username' class='input-label' focus="true">设置昵称：</label>
+      <input type='text'  id='username'  bindinput='onInput1'></input>
+      <label for='phone' class='input-label' focus="true">手机号：</label>
+      <input type='number'  id='phone'  bindinput='onInput2'></input>
+      
+      <button class='button' bindtap='login' hover-class='button-hover' bindtap='register'>注册</button>
+      <view class='navigators'>
+        <navigator open-type='switchTab' url='/pages/login/login'>已有账户？</navigator>
+        <navigator open-type='switchTab' url='/pages/index/index'>回到首页</navigator>
+      </view>
+    </view>
+    
+  </view>
+
+
+  
+  
+
+</view>

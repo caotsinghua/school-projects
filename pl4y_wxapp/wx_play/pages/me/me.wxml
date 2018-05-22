@@ -1,0 +1,35 @@
+<!--pages/me/me.wxml-->
+<view class='me'>
+   <view class='bg-image'>
+    <image src='/resource/images/bg.jpg'></image>
+  </view> 
+  <view class='bg-mask'></view>
+  <view class='main'>
+    <view class='user-header'>
+      <image src='{{userInfo.avatarUrl}}' class='avatar'></image>
+      <view class='userinfo'>
+        <text class='nickname'>{{userInfo.nickName}}</text>
+        <text class='reputation'>信誉:{{userInfo.reputation}}</text>
+        <text class='address'>地点:{{userInfo.province}},{{userInfo.city}}</text>
+        
+      </view>
+      <view class='edit'>
+        <image src='/resource/images/setting.png' bindtap='setting'></image>
+      </view>
+    </view>
+    <view class='menu'>
+      <view class='menu-item' wx:for='{{menus}}' wx:key='{{index}}' hover-class='menu-item-hover' bindtap='{{item.onTap}}'>  
+        <view class='menu-title'>
+          <image src='{{item.iconPath}}'></image>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='menu-direction'>
+          <image src='/resource/images/right1.png'></image>
+        </view>
+      </view>
+      <button class='logout-btn' hover-class='logout-btn-hover'
+      bindtap='quit'
+      ><image src='/resource/images/logout.png'></image>退出登录</button>
+    </view>
+  </view>
+</view>

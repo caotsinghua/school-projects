@@ -1,0 +1,25 @@
+<view class="pingjia">
+  <view class='table-head'>
+    <view class='col1'>
+      <text>成员</text>
+    </view>
+    <view class='col2'>
+      <text>参加情况</text>
+    </view>
+  </view>
+  <view class='member-wrap'>
+      <view class='member' wx:for="{{members}}" wx:key="{{index}}"
+  
+  >
+    <view class='userinfo'>
+      <image class='avatar' src='{{item.avatar}}'></image>
+      <text class='username'>{{item.username}}</text>
+    </view>
+    <view class='action'>
+      <switch bindchange='switchChange' data-arridx="{{index}}"></switch>
+    </view>
+  </view>
+  </view>
+  <button type='primary' bindtap='submit'>提交</button>
+  <button bindtap='cancle'>放弃评价</button>
+</view>

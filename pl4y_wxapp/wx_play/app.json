@@ -1,0 +1,54 @@
+{
+  "maincolor": "#60c0fa",
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/postTask/postTask",
+    "pages/detail/detail",
+    "pages/group/group",
+    "pages/message/message",
+    "pages/login/login",
+    "pages/test/test",
+    "pages/register/register",
+    "pages/myPost/myPost",
+    "pages/joinedTask/joinedTask",
+    "pages/about/about",
+    "pages/fankui/fankui",
+    "pages/setting/setting",
+    "pages/pingjia/pingjia",
+    "pages/messageInfo/messageInfo"
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#60c0fa",
+    "navigationBarTitleText": "PlayPlay",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#51555e",
+    "selectedColor": "#60c0fa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "resource/images/all.png",
+        "selectedIconPath": "resource/images/all-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "resource/images/message.png",
+        "selectedIconPath": "resource/images/message-active.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "resource/images/my.png",
+        "selectedIconPath": "resource/images/me-active.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+.joinedTask{
+  width: 100%;
+  height: 100vh;
+  background: #E2F3FE;
+}
+.tasks{
+  height:100vh;
+}
+.task{
+  width:100%;
+  padding: 25rpx 35rpx;
+  box-sizing: border-box;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15rpx;
+}
+.task-active{
+  background: #eee;
+}
+.task .avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.task .taskInfo{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.taskInfo .top{
+   margin-bottom: 10rpx; 
+}
+.taskInfo .title{
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.taskInfo .address{
+  font-size: 30rpx;
+  color:#ccc;
+  margin-left: 25rpx;
+}
+.taskInfo .desc{
+  
+  font-size: 30rpx;
+   margin-bottom: 10rpx; 
+}
+.taskInfo .type{
+  background:#60c0fa;
+  width: 120rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 50rpx;
+}
+.right-icon{
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.task-pass{
+  background: #fedae5;
+}

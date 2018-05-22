@@ -1,0 +1,29 @@
+<view class="joinedTask">
+  <scroll-view class='tasks' scroll-y="true" bindscrolltolower="onScrollToLower">
+    <view class='no-message' wx:if="{{tasks.length==0}}">
+      <image src='/resource/images/no-data.png'></image>
+    </view>
+    <view class='{{taskInfo.passed?"task task-pass":"task"}}' hover-class='task-active' hover-start-time='0'
+    wx:for="{{tasks}}" wx:for-index="idx" wx:for-item="taskInfo" wx:key="{{idx}}"
+    bindtap='toDetail'
+    data-taskid="{{taskInfo.id}}"
+    >
+      <image src='{{taskInfo.avatarUrl}}' class='avatar'></image>
+      <view class='taskInfo'>
+        <view class='top'>
+          <text class='title'>{{taskInfo.title}}</text>
+          <text class='address'>{{taskInfo.address}}</text>
+        </view>
+        <text class='desc'>{{taskInfo.taskDesc}}</text>
+        <view class='type'>
+          <text class='type-text'>{{taskInfo.type}}</text>
+        </view>
+      </view> 
+      <view class='right-action'>
+        <image src='/resource/images/right-blue.png' class='right-icon'></image>
+      </view>
+    </view>
+
+
+  </scroll-view>
+</view>

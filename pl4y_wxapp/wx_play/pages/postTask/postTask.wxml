@@ -1,0 +1,51 @@
+<!--pages/postTask/postTask.wxml-->
+<view class='post-activity'>
+  <view class='bg-image'>
+    <image src='/resource/images/bg.jpg'></image>
+  </view>
+  <view class='bg-mask'></view>
+  <view class='main'>
+    <form class='post-form'>
+      <view class='form-item'>
+        <label>标题</label>
+        <input placeholder='请输入活动标题' placeholder-class='placeholder-class' bindinput='titleInput'></input>
+      </view>
+      <view class='form-item'>
+        <label>地点</label>
+        <input disabled='true' placeholder='选择活动地点' value='{{address}}' placeholder-class='placeholder-class' bindinput='addressInput'></input>
+        <button class='choose-address' bindtap='openMap'>
+        <image src='/resource/images/address.png'></image></button>
+      </view>
+      <view class='form-item'>
+        <label>分类</label>
+        <picker class='type-picker' mode="selector" range='{{typeRange}}' bindchange='handleTypeChange' >{{type}}</picker>
+      </view>
+      <view class='form-item'>
+        <label>时间</label>
+        <view class='pickers'>
+          <view>
+            <picker class='date-picker' mode="date" bindchange='handleStartDateChange'>{{startDate}}</picker>
+        ~
+        <picker class='date-picker' mode="date" bindchange='handleEndDateChange'>{{endDate}}</picker>
+          </view>
+                    <view>
+            <picker class='date-picker' mode="time" bindchange='handleStartTimeChange'>{{startTime}}</picker>
+        ~
+        <picker class='date-picker' mode="time" bindchange='handleEndTimeChange'>{{endTime}}</picker>
+          </view>
+        </view>
+      </view>
+
+      <view class='form-item'>
+        <label>人数限制</label>
+        <slider min='0' max='20' bindchange='peopleLimitChange' show-value='true' ></slider>
+        <text class='sup-text'>(0表示无限制)</text>
+      </view>
+       <view class='form-item'>
+        <label>简介</label>
+        <textarea class='descri-textarea'  placeholder='会吸引更多用户参与' placeholder-class='placeholder-class' bindinput='descInput'></textarea>
+      </view>
+      <button class='submit-btn' hover-class='submit-btn-hover' form-type='submit' bindtap='submit'>确认发布</button>
+    </form>
+  </view>
+</view>

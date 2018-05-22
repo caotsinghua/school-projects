@@ -1,0 +1,5 @@
+<view>
+  <label>在此输入意见：</label>
+  <input type='text'></input>
+  <button type='primary' bindtap='submit'>提交反馈</button>
+</view>

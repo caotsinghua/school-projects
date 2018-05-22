@@ -1,0 +1,117 @@
+/* pages/postTask/postTask.wxss */
+.post-activity{
+  width: 100%;
+  box-sizing: border-box;
+  padding:20rpx 0;
+  padding-bottom: 0;
+}
+.main{
+  position: relative;
+}
+.post-form{
+  width: 100%;
+  height: 100%;
+}
+
+.form-item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding: 30rpx 20rpx;
+  /* border: 1px solid #ccc; */
+}
+.form-item:nth-child(odd){
+  background: rgba(0, 0, 0, 0.1);
+}
+.form-item input{
+  font-size: 28rpx;
+  /* background: #c8c9cb; */
+  /* border-radius: 10rpx;  */
+  padding: 5rpx 32rpx;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.placeholder-class{
+  font-size: 28rpx;
+  color:#fff;
+  font-weight: normal;
+}
+.form-item label{
+  margin-right:30rpx;
+}
+.form-item slider{
+  width: 300rpx;
+}
+.form-item .sup-text{
+  font-size: 24rpx;
+  color:#000;
+}
+.actions{
+  display: flex;
+}
+.actions button{
+  flex: 1;
+}
+.actions button:first-child{
+  margin-right: 10rpx;
+}
+
+.date-picker{
+  font-size: 28rpx;
+  /* border-bottom: 1px solid #fff; */
+  border-radius: 16rpx; 
+  padding: 5rpx 32rpx;
+  color: #333;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.form-item .type-picker{
+  font-size: 28rpx;
+  /* border-bottom: 1px solid #fff; */
+  border-radius: 16rpx; 
+  padding: 5rpx 32rpx;
+  color: #333;
+  background: rgba(255, 255, 255, 0.6);
+}
+.submit-btn{
+  background: #60c0fa;
+  margin: 0 20rpx;
+  color: #fff;
+}
+.submit-btn-hover{
+  background:  #55ace1;
+}
+.form-item .pickers{
+  display: flex;
+  flex-direction: column;
+}
+.form-item .pickers view{
+  display: flex;
+}
+.form-item .pickers view:first-child{
+  margin-bottom: 30rpx;
+}
+.form-item .descri-textarea{
+  flex: 1 1 auto;
+  font-size: 28rpx;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius:8rpx;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+  color: #fff;
+  height: 140rpx;
+}
+
+.choose-address image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.choose-address{
+  display: flex;
+  align-items: center;
+  width: 100rpx;
+  height: 100rpx;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+}

@@ -1,0 +1,101 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.6",
+	"appid": "自己的appid",
+	"projectname": "demo",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "me",
+					"pathName": "pages/me/me",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "post",
+					"pathName": "pages/postTask/postTask",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mypost",
+					"pathName": "pages/myPost/myPost",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "join",
+					"pathName": "pages/joinedTask/joinedTask",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mes",
+					"pathName": "pages/message/message",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pingjia",
+					"pathName": "pages/pingjia/pingjia",
+					"query": "taskid=2"
+				},
+				{
+					"id": -1,
+					"name": "pingjia",
+					"pathName": "pages/pingjia/pingjia",
+					"query": "taskid=43"
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "abot",
+					"pathName": "pages/about/about",
+					"query": ""
+				}
+			]
+		}
+	}
+}

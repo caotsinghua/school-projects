@@ -1,0 +1,28 @@
+<view class='login'>
+  <view class='bg-image'>
+    <image src='/resource/images/bg.jpg'></image>
+  </view> 
+  <view class='bg-mask'></view>
+  <view class='main'>
+    <view class='normal-login-wrap'>
+      <text class='title'>登录</text>
+      <!-- <label for='username' class='input-label' focus="true">账户</label>
+      <input type='text' disabled='true' id='username'  bindinput='usernameInput'></input>
+      <label for='password' class='input-label'>密码</label>
+      <input type='password' disabled='true' bindinput='passwordInput'></input>
+      <button class='button' bindtap='login' hover-class='button-hover' bindtap='login'>登录</button> -->
+      
+    </view>
+    <!-- <view class='hr'></view> -->
+    <button class='button-wx' hover-class='button-hover' bindtap='wxlogin'><image class='wx-logo' src='../../resource/images/wechat.png'></image> 微信登录</button>
+    <view class='navigators'>
+        <!-- <navigator open-type='switchTab' url='/pages/index/index'>忘记密码？</navigator> -->
+        <navigator open-type='switchTab' url='/pages/index/index'>回到首页</navigator>
+      </view>
+  </view>
+
+
+  
+  
+
+</view>

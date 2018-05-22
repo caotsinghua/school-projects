@@ -1,0 +1,95 @@
+<!--pages/detail/detail.wxml-->
+<view class='detail'>
+  <view class='taskInfo'>
+    <view class='title'>
+      <image src='/resource/images/detail-title.png'></image>
+      <input disabled='{{!isEdit}}' type='text' value='{{markerInfo.title}}' class="{{isEdit?'editing':''}}" bindinput='titleInput'></input>
+      
+    </view>
+    <view class='time'>
+      <image src='/resource/images/detail-date.png'></image>
+      <view class='picker-wrap'>
+            <picker disabled='{{!isEdit}}' class="{{isEdit?'editing':''}}" mode="date" bindchange='handleStartDateChange'>{{markerInfo.startDate}}</picker>
+        ~
+        <picker disabled='{{!isEdit}}' class="{{isEdit?'editing':''}}" mode="date" bindchange='handleEndDateChange'>{{markerInfo.endDate}}</picker>
+      </view>
+    </view>
+    <view class='time2'>
+      <image src='/resource/images/detail-time.png'></image>
+      <view class='picker-wrap'>
+            <picker disabled='{{!isEdit}}' class="{{isEdit?'editing':''}}" mode="time" bindchange='handleStartTimeChange'>{{markerInfo.startTime}}</picker>
+        ~
+        <picker disabled='{{!isEdit}}' class="{{isEdit?'editing':''}}" mode="time" bindchange='handleEndTimeChange'>{{markerInfo.endTime}}</picker>
+      </view>
+    </view>
+    <view class='address'>
+      <image src='/resource/images/detail-address.png' bindtap='openMap'></image>
+      <input disabled type='text' value='{{markerInfo.address}}' class="{{isEdit?'editing':''}}" bindinput='addressInput'></input>
+      <image src='/resource/images/location2.png' class='location-icon' bindtap="{{isEdit?'showMap':'showAddress'}}"></image>
+    </view>
+  </view>
+<view class='sub-info'>
+  <view class='sub-info-item'>
+    <picker disabled='{{!isEdit}}' class="{{isEdit?'editing':''}}" mode="selector" range='{{typeRange}}' bindchange='handleTypeChange' >{{markerInfo.type}}</picker>
+    <text class='title'>类别</text>
+  </view>
+  <view class='sub-info-item'>
+    <input disabled='{{!isEdit}}' type='text'  style='text-align:center;' value='{{markerInfo.peopleLimit==0?"不限":markerInfo.peopleLimit}}' class="{{isEdit?'editing':''}}"
+    bindinput='peopleLimitChange'
+    ></input>
+    <text class='title'>人数</text>
+  </view>
+</view>
+
+  <view class='poster'>
+    <view class='title'>
+      <text>发布人</text>
+    </view>
+    <view class='poster-content'>
+      <view class='left'>
+        <image src='{{userInfo.avatar}}'></image>
+        <text>{{userInfo.nickName}}</text>
+      </view>
+      <view class='right'>
+        <image class='phone-icon' src='/resource/images/phone.png'></image>
+        <text class='phone'>{{userInfo.phone}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='peoples'>
+    <view class='title'>
+      <text>活动简介</text>
+    </view>
+    <view class='peoples-content'>
+      <text>{{markerInfo.taskDesc==""?"还没有简介。":markerInfo.taskDesc}}</text>
+    </view>
+  </view>
+  <view class='peoples'>
+    <view class='title'>
+      <text>参与者({{markerInfo.currentPeoples.length}})</text>
+    </view>
+    <view class='peoples-content'>
+      <image class='people' wx:for="{{markerInfo.currentPeoples}}"
+      src='{{item.avatar}}'
+      wx:key="{{index}}"
+      bindtap='showPhone'
+      data-idx="{{index}}"
+      ></image>
+    </view>
+  </view>
+
+  <text class='end-text' wx:if="{{markerInfo.passed}}">活动已结束</text>
+  <button type='warn' wx:if="{{markerInfo.passed&&isPoster}}" bindtap='deleteTask'>删除</button>
+  <view class='actions'>
+
+  <button type='primary' bindtap="{{isEdit?'save':'edit'}}" wx:if="{{isPoster&&!markerInfo.passed}}">{{isEdit?'保存':'编辑'}}</button>
+  <!--发布者且任务未结束  -->
+  <button type='warn' wx:if="{{isPoster&&!markerInfo.passed}}" bindtap='finishTask'>活动结束</button>
+  </view>
+    <!--既不是发布者也不是参加成员且活动未结束-显示-->
+    <button class='join' bindtap='join' hover-class='join-hover' wx:if="{{!isMember&&!markerInfo.passed}}">参加活动</button>
+    <!--活动没有结束并且参加了这个活动-显示  -->
+    <button type='warn' wx:if="{{isMember&&!markerInfo.passed}}" bindtap='quitTask'>退出活动</button>
+
+    
+</view>

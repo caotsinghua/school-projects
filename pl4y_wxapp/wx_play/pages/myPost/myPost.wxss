@@ -1,0 +1,108 @@
+.mypost{
+  width: 100%;
+  height: 100vh;
+  background: #E2F3FE;
+  padding-top: 1rpx;
+  flex-direction: column;
+  position: relative;
+}
+.tabs{
+  width: 700rpx;
+  border: 1px solid #60c0fa;
+  border-radius: 16rpx;
+  display: flex;
+  position: fixed;
+  top: 30rpx;
+  left: 50%;
+  margin-left: -350rpx;
+  z-index: 99;
+}
+.tab{
+  color:#60c0fa;
+  flex: 1;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.tab:first-child{
+  border-right: 1px solid #60c0fa;
+}
+.tab-select{
+  background: #60c0fa;
+  color: #fff;
+}
+.tasks{
+  position: fixed;
+  top: 136rpx;
+  height: 1070rpx;
+}
+.task{
+  width:100%;
+  /* border: 1px solid #000; */
+  padding: 25rpx 35rpx;
+  box-sizing: border-box;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15rpx;
+}
+.task-active{
+  background: #eee;
+}
+.task .avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.task .taskInfo{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.taskInfo .top{
+   margin-bottom: 10rpx; 
+}
+.taskInfo .title{
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.taskInfo .address{
+  font-size: 30rpx;
+  color:#ccc;
+  margin-left: 25rpx;
+}
+.taskInfo .desc{
+  
+  font-size: 30rpx;
+   margin-bottom: 10rpx; 
+}
+.taskInfo .type{
+  background:#60c0fa;
+  width: 120rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 50rpx;
+}
+.right-icon{
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.tab-hover{
+  background: #60c0fa;
+  color: #fff;
+}
+
+.no-message{
+  width: 100%;
+  height:600rpx;
+  display: flex;
+  justify-content: space-around;
+ padding-top: 100rpx;
+   background: #E2F3FE;
+}

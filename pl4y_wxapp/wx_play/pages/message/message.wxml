@@ -1,0 +1,29 @@
+<view class='messageView'>
+  <view class='no-message' wx:if="{{messages.length==0}}">
+      <image src='/resource/images/no-data.png'></image>
+  </view>
+  <view class='messages-wrap'>
+    <view class='message-wrap' wx:for="{{messages}}" wx:key="{{index}}" hover-class='message-hover' hover-start-time='0'
+      data-messageid="{{index}}"
+      bindtap='readOne'
+    >
+      <view class='message'>
+        <view class='left'>
+            <image src='{{item.avatar}}'></image>
+          </view>
+        <view class='right'>
+          <view class='head'>
+            <text class='username'>{{item.postername}}</text>
+            <text class='message-type'>{{item.type}}</text>
+            
+          </view>
+          <view class='content'>
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+      </view>
+     <view class='dot' wx:if="{{!item.passed}}"></view>
+    </view>
+  </view>
+  <!-- <button wx:if="{{messages.length>0}}" class='read-all' hover-class='read-hover' hover-start-time='0'>全部已读</button> -->
+</view>

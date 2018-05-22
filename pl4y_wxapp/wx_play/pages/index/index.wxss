@@ -1,0 +1,83 @@
+/**index.wxss**/
+.index{
+  width: 100%;
+  height: 100vh;
+}
+.map-wrap{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.map{
+  width: 100%;
+  height:  100%;
+  position: relative;
+}
+
+.location{
+  position: absolute;
+  z-index:999;
+  bottom:120rpx;
+  left: 80rpx; 
+  width: 70rpx;
+  height: 70rpx;
+}
+.location cover-image{
+  width: 48rpx;
+  height: 48rpx; 
+  border-radius: 48rpx;
+  background: #fff;
+  padding: 10rpx;
+  box-shadow: 1px 2px 2px 1px#ccc;
+}
+.location cover-image:active{
+  background: #ccc;
+}
+.me{
+  position: absolute;
+  z-index:999;
+  bottom:120rpx;
+  right: 80rpx; 
+  background: #fff;
+  box-shadow: 2px 2px 2px #ccc;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 100rpx;
+  padding: 10rpx;
+}
+.me cover-image{
+  width: 48rpx;
+  height: 48rpx; 
+}
+
+.postActivity{
+  position: absolute;
+  z-index:999;
+  bottom:30rpx;
+  left: 50%;
+  margin-left: -125rpx; 
+  box-shadow: 2px 2px 3px 0px #33ccff;
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 250rpx;
+  box-sizing: border-box;
+  background: #22ccff;
+  color: #333;
+  /* background: linear-gradient(to right,#33bbff,#22ccff); */
+}
+.postActivity cover-image{
+  width: 48rpx;
+  height: 48rpx; 
+  margin: 69rpx auto 20rpx auto;
+}
+.postActivity cover-view{
+  display: block;
+  text-align: center;
+}
+
+.side-hover{
+  background: #ccc;
+}
+.post-hover{
+  background: linear-gradient(to right,#22ccff,#33bbff);
+}
